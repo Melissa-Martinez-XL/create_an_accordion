@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create An Accordion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus nibh ut accumsan fringilla. 
+            Nulla risus felis, ultrices sit amet efficitur sit amet, volutpat vitae mi. Praesent porta odio in 
+            hendrerit fringilla. Nulla non aliquam felis. Donec hendrerit accumsan diam, ut gravida ligula aliquet 
+            a. Mauris convallis ligula vel porta congue. Fusce a mi tincidunt, semper ligula vel, congue ipsum. 
+        </p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus nibh ut accumsan fringilla. 
+            Nulla risus felis, ultrices sit amet efficitur sit amet, volutpat vitae mi. Praesent porta odio in 
+            hendrerit fringilla. Nulla non aliquam felis. Donec hendrerit accumsan diam, ut gravida ligula aliquet 
+            a. Mauris convallis ligula vel porta congue. Fusce a mi tincidunt, semper ligula vel, congue ipsum. 
+        </p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>            
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus nibh ut accumsan fringilla. 
+            Nulla risus felis, ultrices sit amet efficitur sit amet, volutpat vitae mi. Praesent porta odio in 
+            hendrerit fringilla. Nulla non aliquam felis. Donec hendrerit accumsan diam, ut gravida ligula aliquet 
+            a. Mauris convallis ligula vel porta congue. Fusce a mi tincidunt, semper ligula vel, congue ipsum. 
+        </p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
